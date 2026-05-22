@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Pomodoro Timer</h1>
+
+    <div class="mode" id="modeText">FOCUS MODE</div>
+
+    <div class="timer" id="timer">
+      25:00
+    </div>
+
+    <div class="settings">
+      <div>
+        <label>Focus Minutes</label>
+        <input type="number" id="focusInput" value="25" min="1"/>
+      </div>
+
+      <div>
+        <label>Break Minutes</label>
+        <input type="number" id="breakInput" value="5" min="1"/>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resumeBtn">Resume</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="history">
+      <h2>Today's Sessions</h2>
+      <ul id="historyList"></ul>
+    </div>
+
+  </div>
+
+  <audio id="alarm">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
